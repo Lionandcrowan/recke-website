@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Über mich – Dominik „Recke“ Reck, der Mann hinter Opa Hans Lompes</title>
+<meta name="description" content="Vom Traum Fußballprofi über ein Jahr Spanien bis zu Opa Hans Lompes: Dominik „Recke“ Reck erzählt seinen Weg.">
+<link rel="canonical" href="https://dominikreck.de/ueber-mich.html">
+<meta property="og:title" content="Über mich – Dominik „Recke“ Reck">
+<meta property="og:image" content="https://dominikreck.de/logo/recke-logo-auf-indigo.png">
+<link rel="icon" type="image/svg+xml" href="logo/recke-zeichen.svg">
+<link rel="apple-touch-icon" href="logo/apple-touch-icon.png">
+<meta name="theme-color" content="#0d053f">
+<link rel="preload" as="font" type="font/woff2" href="fonts/Inter-1ab1ad55.woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/Inter-749a3084.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C4,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/Inter-1ab1ad55.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url(fonts/CormorantGaramond-39cad610.woff2) format("woff2")}
+:root{--ink:#0d053f;--ink-2:#170d5c;--cream:#efe7dc;--cream-2:#f7f3ed;--red:#d1202f;--red-l:#ef3b4a;--line:rgba(255,255,255,.1);
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;--serif:"Cormorant Garamond",Georgia,serif;--ease:cubic-bezier(.2,.7,.1,1);--pad:max(20px,5vw)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{background:var(--cream-2);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.s{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.02em}
+.wrap{width:min(1100px,100% - 2*var(--pad));margin-inline:auto}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:600;font-size:16px;padding:15px 26px;transition:transform .3s var(--ease),background .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 34px -12px rgba(209,32,47,.8)}
+.btn-red:hover{background:var(--red-l)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff}
+.btn svg{width:18px;height:18px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+.nav{position:fixed;inset:0 0 auto;z-index:60;height:60px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 var(--pad);color:#fff;
+  background:rgba(13,5,63,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.nav img{height:40px;width:auto}
+.nav .back{font-size:14px;font-weight:500;opacity:.8;margin-right:auto;margin-left:10px}
+.nav .back:hover{opacity:1}
+.nav .btn{padding:9px 18px;font-size:14px}
+.bar{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--red);transform-origin:0 50%;transform:scaleX(0);z-index:70}
+
+/* Kopf */
+.kopf{position:relative;background:var(--ink);color:#fff;padding:clamp(130px,16vw,200px) 0 clamp(70px,9vw,120px);overflow:hidden}
+.kopf-wort{position:absolute;top:8%;left:0;white-space:nowrap;font-weight:900;font-size:24vw;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.08);user-select:none;will-change:transform}
+.kopf-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,6vw,80px);align-items:center}
+h1{font-weight:800;font-size:clamp(42px,6.4vw,92px);line-height:.96;letter-spacing:-.05em;margin-top:14px}
+h1 em{display:block;font-size:1.06em}
+.kopf p.lead{margin-top:24px;font-size:clamp(18px,1.7vw,22px);line-height:1.5;opacity:.85;max-width:30em}
+.stage{--d:min(400px,76vw);position:relative;width:var(--d);height:calc(var(--d) * 1.2);margin-inline:auto}
+.disc{position:absolute;left:0;bottom:0;width:var(--d);height:var(--d);border-radius:50%;background:radial-gradient(circle at 35% 30%,#ef3b4a,#b01522 70%);box-shadow:0 40px 70px -30px rgba(0,0,0,.6)}
+.pop{position:absolute;inset:0;overflow:hidden;border-radius:0 0 calc(var(--d) / 2) calc(var(--d) / 2)}
+.pop img{position:absolute;left:50%;bottom:calc(var(--d) * -.08);width:calc(var(--d) * 1.16);height:auto;max-width:none;transform:translateX(-53%)}
+
+/* Kapitel */
+.story{padding:clamp(70px,9vw,130px) 0 clamp(40px,6vw,80px)}
+.kap{display:grid;grid-template-columns:150px 1fr;gap:clamp(20px,4vw,60px);padding:clamp(34px,4.5vw,60px) 0;border-top:1px solid rgba(13,5,63,.14)}
+.kap:first-child{border-top:0;padding-top:0}
+.kap .nr{font-weight:900;font-size:clamp(54px,7vw,96px);line-height:.85;letter-spacing:-.06em;color:var(--red)}
+.kap h2{font-weight:800;font-size:clamp(28px,3.4vw,46px);line-height:1.04;letter-spacing:-.04em;max-width:16em}
+.kap p{margin-top:16px;max-width:36em;font-size:clamp(17px,1.4vw,19px)}
+.zitat{margin:clamp(30px,4vw,56px) 0;padding:clamp(30px,4vw,54px);border-radius:28px;background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.zitat p{font-weight:800;font-size:clamp(26px,3.6vw,50px);line-height:1.08;letter-spacing:-.04em;max-width:18em}
+.zitat p em{color:var(--red-l);font-style:normal}
+.zitat small{display:block;margin-top:16px;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.6}
+.bilder{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:clamp(26px,3vw,40px) 0 0;max-width:36em}
+.bilder img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 50px -30px rgba(60,35,15,.6)}
+.opa-kap{display:grid;grid-template-columns:1fr 140px;gap:30px;align-items:center}
+.opa-kap img{width:100%;height:auto;filter:drop-shadow(0 20px 24px rgba(60,35,15,.3))}
+.gruss{font-family:var(--serif);font-style:italic;font-size:38px;margin-top:22px}
+
+/* Schluss */
+.schluss{background:var(--red);color:#fff;text-align:center;padding:clamp(70px,9vw,120px) 0}
+.schluss h2{font-weight:800;font-size:clamp(34px,5.4vw,72px);line-height:1;letter-spacing:-.045em}
+.schluss p{margin:18px auto 0;max-width:30em;opacity:.9}
+.schluss .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:30px}
+.schluss .btn-red{background:var(--ink);box-shadow:none}
+.schluss .btn-red:hover{background:#1c1170}
+.schluss .btn-ghost{background:rgba(0,0,0,.2)}
+footer{background:var(--ink);color:#fff;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;opacity:.65}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:860px){
+  .kopf-grid{grid-template-columns:1fr}
+  .stage{margin-top:20px}
+  .kap{grid-template-columns:1fr;gap:10px}
+  .opa-kap{grid-template-columns:1fr 84px;gap:14px}
+  .nav .back{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<header class="nav">
+  <a href="index.html" aria-label="Recke – zur Startseite"><img src="logo/recke-logo-creme.svg" alt="Recke" width="489" height="226"></a>
+  <a class="back" href="index.html">← Zur Startseite</a>
+  <a href="index.html#tickets" class="btn btn-red">Tickets</a>
+</header>
+
+<main>
+<section class="kopf">
+  <div class="kopf-wort" id="wort" aria-hidden="true">ÜBER MICH</div>
+  <div class="wrap kopf-grid">
+    <div>
+      <p class="eyebrow" style="color:var(--red-l)">Über mich</p>
+      <h1>Vom Bolzplatz <em class="s">zu Opa Hans</em></h1>
+      <p class="lead">Ich erzähl dir ein bisschen was von mir. Und wie aus einem Kicker aus Oberschwaben irgendwann Opa Hans geworden ist.</p>
+    </div>
+    <div class="stage">
+      <div class="disc"></div>
+      <div class="pop"><img src="img/recke.webp" alt="Dominik „Recke“ Reck" width="2304" height="3072" fetchpriority="high"></div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+
+    <article class="kap reveal">
+      <div class="nr">01</div>
+      <div>
+        <h2>Eigentlich wollte ich Fußballprofi werden</h2>
+        <p>Als Kind gab es für mich nur ein Ziel: Fußballprofi. Ich habe gekickt, wann immer es ging.</p>
+        <p>Als Teenager war mir dann irgendwann klar, dass das nichts wird. Gespielt habe ich trotzdem weiter, halt in den unteren Ligen Oberschwabens. Und zwar bis ich 36 war. Dann ist mir zum zweiten Mal das Kreuzband gerissen.</p>
+      </div>
+    </article>
+
+    <article class="kap reveal">
+      <div class="nr">02</div>
+      <div>
+        <h2>Ein dummer Spruch geht immer</h2>
+        <p>Einen dummen Spruch hatte ich schon immer auf den Lippen. Der klassische Klassenkasper war ich nicht. Aber gelacht haben am Ende trotzdem alle.</p>
+        <p>Das war später in der Ausbildung genauso. Und in den Kabinen der Vereine, für die ich gespielt habe, sowieso.</p>
+      </div>
+    </article>
+
+    <article class="kap reveal">
+      <div class="nr">03</div>
+      <div>
+        <h2>Ich kann auch ernst</h2>
+        <p>Ich kann Dinge aber auch ernst nehmen. In der Grundschule haben wir Maria und Josef aufgeführt. Ich habe damals sicherheitshalber die Texte von allen meinen Klassenkameraden auswendig gelernt.</p>
+        <p>So konnte ich einspringen, wenn einer seinen Text vergessen hatte.</p>
+        <div class="bilder"><img src="img/portraet-2.jpg" alt="Dominik Reck – Porträt" loading="lazy"><img src="img/portraet-1.jpg" alt="Dominik Reck privat" loading="lazy"></div>
+      </div>
+    </article>
+
+    <article class="kap reveal">
+      <div class="nr">04</div>
+      <div>
+        <h2>Ein Jahr Spanien</h2>
+        <p>Als Teenager bin ich für ein Jahr nach Spanien gezogen. Was das sollte, musst du meine Eltern fragen.</p>
+        <p>Ich bin heute jedenfalls froh drum. Das Jahr hat mich ziemlich geprägt.</p>
+      </div>
+    </article>
+
+    <div class="zitat reveal">
+      <p>Das Leben ist zu kurz für keinen Spaß. <em>Man lebt nur einmal.</em></p>
+      <small>Recke</small>
+    </div>
+
+    <article class="kap reveal" style="border-top:0">
+      <div class="nr">05</div>
+      <div>
+        <h2>Dann kam der Motorradunfall</h2>
+        <p>Später hatte ich einen Motorradunfall. Irgendwann danach habe ich mir gesagt: Das Leben ist zu kurz für keinen Spaß. Man lebt nur einmal.</p>
+        <p>Also scheiß drauf, ich mache jetzt das, worauf ich Lust habe.</p>
+      </div>
+    </article>
+
+    <article class="kap reveal">
+      <div class="nr">06</div>
+      <div class="opa-kap">
+        <div>
+          <h2>Und so kam Opa Hans</h2>
+          <p>Tja, und so ist irgendwann Opa Hans Lompes entstanden. Angefangen hat es als Spaß auf TikTok. Inzwischen bringt mich der Opa sogar auf die Bühne.</p>
+          <p>Schön, dass du dabei bist.</p>
+          <p class="gruss">LG Recke</p>
+        </div>
+        <img src="img/opa.webp" alt="Opa Hans Lompes" loading="lazy" width="1327" height="3830">
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="schluss">
+  <div class="wrap">
+    <h2 class="reveal">Erleb Opa Hans <span class="s">live</span></h2>
+    <p class="reveal">„Früher war alles besser“ – am Samstag, 20.02.2027, um 20 Uhr im Stadtforum Bad Saulgau.</p>
+    <div class="cta reveal">
+      <a class="btn btn-red" href="index.html#tickets">Tickets sichern</a>
+      <a class="btn btn-ghost" href="index.html">Zur Startseite</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Dominik Reck. Alle Rechte vorbehalten.</span>
+  <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
+</div></footer>
+
+<script>
+/* Meta-Pixel: derselbe Datensatz wie auf der Startseite – nur wenn dort bereits zugestimmt wurde. Lokal wird nichts gesendet. */
+(function(){
+  let v = null; try { v = localStorage.getItem('consent-meta'); } catch(e){}
+  if (v !== 'yes') return;
+  if (!/(^|\.)dominikreck\.de$/.test(location.hostname)) {   /* alles außer dominikreck.de gilt als Test */ console.info('[Pixel] lokal – PageView würde jetzt gesendet'); return; }
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;
+  s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1482597936803369'); fbq('track', 'PageView');
+})();
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+const bar = document.getElementById('bar'), wort = document.getElementById('wort');
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+  if (!still) wort.style.transform = `translate3d(${-scrollY * .25}px,0,0)`;
+}, { passive: true });
+</script>
+</body>
+</html>
