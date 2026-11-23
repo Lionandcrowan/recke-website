@@ -294,15 +294,19 @@ footer a:hover{text-decoration:underline}
 .adv-link{color:#fff;opacity:1!important;padding:6px 12px;border-radius:999px;background:rgba(31,107,69,.55);border:1px solid rgba(255,255,255,.18)}
 .adv{position:fixed;inset:0;z-index:85;display:grid;place-items:center;padding:20px;background:rgba(6,10,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
 .adv.on{opacity:1;visibility:visible}
-.adv-box{position:relative;width:min(430px,100%);border-radius:30px;padding:0 30px 28px;text-align:center;color:#fff;
-  background:radial-gradient(120% 80% at 50% 0%,#1f6b45 0%,#14402c 45%,#0d1a2b 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 50px 100px -30px #000;
+.adv-box{position:relative;width:min(440px,100%);border-radius:30px;padding:0 30px 26px;text-align:center;color:#fff;
+  background:radial-gradient(120% 70% at 50% 0%,#3a1d8f 0%,#1c1170 40%,#0d053f 100%);border:1px solid rgba(255,255,255,.18);box-shadow:0 50px 100px -30px #000;
   transform:translateY(30px) scale(.94);transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
 .adv.on .adv-box{transform:none}
-.adv-box img{width:62%;height:auto;margin:-70px auto 6px;filter:drop-shadow(0 20px 24px rgba(0,0,0,.5))}
-.adv-box .eyebrow{color:#f3d9a4}
-.adv-box h3{font-weight:800;font-size:clamp(40px,9vw,56px);letter-spacing:-.045em;line-height:1;margin-top:8px}
-.adv-box p:not(.eyebrow){margin:12px auto 22px;max-width:19em;opacity:.85;font-size:16px;line-height:1.45}
-.adv-box .btn{width:100%}
+.adv-box img{width:44%;max-width:190px;height:auto;margin:-64px auto 16px;border-radius:12px;transform:rotate(-4deg);box-shadow:0 26px 44px -16px rgba(0,0,0,.85)}
+.adv-box .eyebrow{color:#fff;display:inline-flex;align-items:center;gap:8px;font-size:11px}
+.adv-box .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--red-l);animation:pulse 1.8s infinite}
+.adv-box h3{font-weight:800;font-size:clamp(34px,8vw,46px);letter-spacing:-.045em;line-height:1;margin-top:10px}
+.adv-box h3 em{display:block;font-size:1.08em}
+.adv-box p:not(.eyebrow){margin:12px auto 20px;max-width:21em;opacity:.9;font-size:16px;line-height:1.45}
+.adv-box p b{color:#fff;white-space:nowrap}
+.adv-box .btn{width:100%;padding:16px 22px}
+.adv-box .btn + .btn{margin-top:10px}
 .adv-later{display:block;margin:14px auto 0;font-size:14px;opacity:.65;text-decoration:underline}
 .adv-x{position:absolute;right:14px;top:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.14);font-size:22px;line-height:1;z-index:2}
 .cookie{position:fixed;left:16px;bottom:16px;z-index:80;width:min(400px,calc(100% - 32px));background:#fff;color:var(--ink);border-radius:22px;padding:22px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);font-size:14px;line-height:1.5;display:none}
@@ -642,16 +646,16 @@ footer a:hover{text-decoration:underline}
 
 <div class="lb" id="lb"><button aria-label="Schließen">×</button><img alt=""></div>
 
-<div class="adv" id="adv" role="dialog" aria-modal="true" aria-labelledby="advT">
+<div class="adv tixpop" id="tixpop" role="dialog" aria-modal="true" aria-labelledby="tixT">
   <div class="adv-box">
-    <button class="adv-x" id="advX" aria-label="Schließen">×</button>
-    <img src="img/opa-muetze-kopf.webp" alt="Opa Hans mit Weihnachtsmütze" width="1022" height="852">
-    <p class="eyebrow">Opa Hans’ Adventskalender</p>
-    <h3 id="advT">Türle auf!</h3>
-    <p id="advP">24 Türchen, 24 Gewinne – und Opa Hans hat überall seine Finger drin. Mitmachen kostet nix.</p>
-    <a class="btn btn-red" id="advGo" href="https://advent.dominikreck.de" target="_blank" rel="noopener">Zum Adventskalender
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-    <button class="adv-later" id="advLater">Später vielleicht</button>
+    <button class="adv-x" id="tixX" aria-label="Schließen">×</button>
+    <img src="img/plakat.jpg" alt="Plakat „Früher war alles besser“" width="902" height="1276">
+    <p class="eyebrow"><i></i>Live · Sa., 20.02.2027 · 20 Uhr</p>
+    <h3 id="tixT">Opa Hans <em class="s">live erleben</em></h3>
+    <p>„Früher war alles besser“ im Stadtforum Bad Saulgau. <b id="tixTage"></b>Freie Platzwahl.</p>
+    <a class="btn btn-red" data-ticket="Reservix (Pop-up)" href="https://www.reservix.de/tickets-opa-hans-lompes-frueher-war-alles-besser-in-bad-saulgau-stadtforum-bad-saulgau-am-20-2-2027/e2548883" target="_blank" rel="noopener">Tickets bei Reservix <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <a class="btn btn-ghost" data-ticket="Eventim (Pop-up)" href="https://www.eventim.de/event/opa-hans-lompes-frueher-war-alles-besser-stadtforum-bad-saulgau-21550862/?affiliate=GMD" target="_blank" rel="noopener">Tickets bei Eventim <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+    <button class="adv-later" id="tixLater">Später vielleicht</button>
   </div>
 </div>
 
@@ -736,27 +740,40 @@ addEventListener('keydown', e => e.key === 'Escape' && closeLb());
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -6% 0px' });
 $$('.reveal, .opa-stage').forEach(el => io.observe(el));
 
-/* ---------- Adventskalender: Links + Pop-up (nur bis 24.12.2026) ---------- */
+/* ---------- Adventskalender: nur noch Links (bis 24.12.2026) ---------- */
 (function(){
-  const now = new Date(), ende = new Date('2026-12-24T23:59:59+01:00'), start = new Date('2026-12-01T00:00:00+01:00');
-  const adv = $('#adv'), cookieBox = $('#cookie');
-  if (now > ende) { $$('[data-advent]').forEach(e => e.remove()); adv.remove(); return; }
-  if (now >= start) { $('#advP').textContent = 'Heute wartet wieder ein Türchen auf dich: 24 Türchen, 24 Gewinne. Mitmachen kostet nix.'; $('#advGo').firstChild.textContent = 'Heutiges Türchen öffnen '; }
-  else $('#advP').textContent = 'Am 1. Dezember geht’s los: 24 Türchen, 24 Gewinne. Trag dich jetzt schon ein – mitmachen kostet nix.';
-  const KEY = 'advent-pop', PAUSE = 2 * 864e5;                       /* nach dem Schließen 2 Tage Ruhe */
-  let last = 0; try { last = +localStorage.getItem(KEY) || 0; } catch(e){}
-  const close = () => { adv.classList.remove('on'); try { localStorage.setItem(KEY, Date.now()); } catch(e){} };
-  $('#advX').onclick = $('#advLater').onclick = close;
-  adv.addEventListener('click', e => { if (e.target === adv) close(); });
-  addEventListener('keydown', e => e.key === 'Escape' && adv.classList.contains('on') && close());
-  $$('a[href*="advent.dominikreck.de"]').forEach(a => a.addEventListener('click', () => { track('AdventKlick', {}); if (adv.classList.contains('on')) close(); }));
-  if (Date.now() - last < PAUSE) return;
-  /* erst zeigen, wenn der Cookie-Hinweis weg ist und der Besucher kurz Zeit hatte */
-  let waited = 0;
-  const iv = setInterval(() => {
-    if (cookieBox.classList.contains('on') || $('#lb').classList.contains('on')) { waited = Math.min(waited, 4); return; }
-    if (++waited >= 6) { clearInterval(iv); adv.classList.add('on'); }
-  }, 1000);
+  if (new Date() > new Date('2026-12-24T23:59:59+01:00')) { $$('[data-advent]').forEach(e => e.remove()); return; }
+  $$('a[href*="advent.dominikreck.de"]').forEach(a => a.addEventListener('click', () => track('AdventKlick', {})));
+})();
+
+/* ---------- Ticket-Pop-up ---------- */
+(function(){
+  const pop = $('#tixpop'), cookieBox = $('#cookie'), tixSec = $('#tickets');
+  const SHOW = new Date('2027-02-20T20:00:00+01:00').getTime();
+  if (Date.now() > SHOW) { pop.remove(); return; }                 /* nach der Show nicht mehr */
+  const tage = Math.ceil((SHOW - Date.now()) / 864e5);
+  $('#tixTage').textContent = tage > 1 ? `Noch ${tage} Tage. ` : (tage === 1 ? 'Morgen ist es so weit. ' : 'Heute Abend! ');
+  const lese = k => { try { return +localStorage.getItem(k) || 0; } catch(e){ return 0; } };
+  const merke = k => { try { localStorage.setItem(k, Date.now()); } catch(e){} };
+  const offen = () => pop.classList.contains('on');
+  const zu = () => { pop.classList.remove('on'); merke('ticket-pop'); };
+  $('#tixX').onclick = $('#tixLater').onclick = zu;
+  pop.addEventListener('click', e => { if (e.target === pop) zu(); });
+  addEventListener('keydown', e => e.key === 'Escape' && offen() && zu());
+  /* wer schon auf einen Ticket-Knopf geklickt hat, wird 7 Tage nicht mehr gefragt */
+  $$('[data-ticket]').forEach(a => a.addEventListener('click', () => { merke('ticket-klick'); if (offen()) pop.classList.remove('on'); }));
+  if (Date.now() - lese('ticket-pop') < 2 * 864e5 || Date.now() - lese('ticket-klick') < 7 * 864e5) return;
+  let gezeigt = false;
+  const zeigen = () => {
+    if (gezeigt || cookieBox.classList.contains('on') || $('#lb').classList.contains('on')) return false;
+    const r = tixSec.getBoundingClientRect();                       /* nicht stören, wenn die Tickets gerade im Bild sind */
+    if (r.top < innerHeight * .6 && r.bottom > innerHeight * .4) return false;
+    gezeigt = true; pop.classList.add('on'); track('TicketPopup', {}); return true;
+  };
+  /* 1) nach zwölf Sekunden auf der Seite, 2) am Desktop auch, wenn die Maus die Seite nach oben verlässt */
+  let sek = 0;
+  const iv = setInterval(() => { if (gezeigt) return clearInterval(iv); if (++sek >= 12 && zeigen()) clearInterval(iv); }, 1000);
+  document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY <= 0 && sek >= 4) zeigen(); });
 })();
 
 /* ---------- Countdown ---------- */
