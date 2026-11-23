@@ -770,10 +770,10 @@ $$('.reveal, .opa-stage').forEach(el => io.observe(el));
     if (r.top < innerHeight * .6 && r.bottom > innerHeight * .4) return false;
     gezeigt = true; pop.classList.add('on'); track('TicketPopup', {}); return true;
   };
-  /* 1) nach zwölf Sekunden auf der Seite, 2) am Desktop auch, wenn die Maus die Seite nach oben verlässt */
+  /* 1) nach fünf Sekunden auf der Seite (frühestens zwei Sekunden nach dem Cookie-Hinweis), 2) am Desktop auch, wenn die Maus die Seite nach oben verlässt */
   let sek = 0;
-  const iv = setInterval(() => { if (gezeigt) return clearInterval(iv); if (++sek >= 12 && zeigen()) clearInterval(iv); }, 1000);
-  document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY <= 0 && sek >= 4) zeigen(); });
+  const iv = setInterval(() => { if (gezeigt) return clearInterval(iv); if (cookieBox.classList.contains('on')) { sek = Math.min(sek + 1, 3); return; } if (++sek >= 5 && zeigen()) clearInterval(iv); }, 1000);
+  document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY <= 0 && sek >= 2) zeigen(); });
 })();
 
 /* ---------- Countdown ---------- */
