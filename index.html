@@ -67,8 +67,8 @@ h2 em.s{font-size:1.08em;letter-spacing:-.03em}
 .nav ul{display:flex;gap:30px;list-style:none;font-size:14px;font-weight:500}
 .nav ul a{opacity:.75;transition:opacity .2s}
 .nav ul a:hover{opacity:1}
-.soon{display:inline-flex;align-items:center;gap:7px;opacity:.5;cursor:default;user-select:none;white-space:nowrap}
-.soon em{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:999px;border:1px solid currentColor}
+.shop-link{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.shop-link em{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:999px;background:var(--red);color:#fff}
 .nav ul{white-space:nowrap}
 @media (max-width:1360px){.nav ul{gap:18px;font-size:13px}}
 @media (max-width:1200px){.nav ul{display:none}}
@@ -387,7 +387,7 @@ footer a:hover{text-decoration:underline}
     <li><a href="#presse">Presse &amp; TV</a></li>
     <li><a href="#social">Social Media</a></li>
     <li><a href="ueber-mich.html">Über mich</a></li>
-    <li><span class="soon" aria-disabled="true" title="Der Schwabashop kommt bald">Schwabashop <em>Soon</em></span></li>
+    <li><a class="shop-link" data-shop href="https://schwabashop.de/" target="_blank" rel="noopener">Schwabashop <em>Neu</em></a></li>
     <li data-advent><a class="adv-link" href="https://advent.dominikreck.de" target="_blank" rel="noopener">🎁 Adventskalender</a></li>
   </ul>
   <a href="#tickets" class="btn btn-red">Tickets</a>
@@ -639,7 +639,7 @@ footer a:hover{text-decoration:underline}
 
 <footer><div class="wrap">
   <span>© 2026 Dominik Reck. Alle Rechte vorbehalten.</span>
-  <span><span class="soon" aria-disabled="true">Schwabashop <em>Soon</em></span> · <a data-advent href="https://advent.dominikreck.de" target="_blank" rel="noopener">Adventskalender</a><i data-advent> · </i><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="#" id="cookieOpen">Cookie-Einstellungen</a></span>
+  <span><a data-shop href="https://schwabashop.de/" target="_blank" rel="noopener">Schwabashop</a> ·<a data-advent href="https://advent.dominikreck.de" target="_blank" rel="noopener">Adventskalender</a><i data-advent> · </i><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="#" id="cookieOpen">Cookie-Einstellungen</a></span>
 </div></footer>
 
 <div class="mbar" id="mbar"><a href="#tickets" class="btn btn-red">Tickets für 20.02.2027 sichern</a></div>
@@ -745,6 +745,9 @@ $$('.reveal, .opa-stage').forEach(el => io.observe(el));
   if (new Date() > new Date('2026-12-24T23:59:59+01:00')) { $$('[data-advent]').forEach(e => e.remove()); return; }
   $$('a[href*="advent.dominikreck.de"]').forEach(a => a.addEventListener('click', () => track('AdventKlick', {})));
 })();
+
+/* Klick auf den Schwabashop als eigenes Ereignis */
+$$('[data-shop]').forEach(a => a.addEventListener('click', () => track('ShopKlick', {})));
 
 /* ---------- Ticket-Pop-up ---------- */
 (function(){
